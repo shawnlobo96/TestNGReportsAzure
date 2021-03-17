@@ -1,0 +1,19 @@
+# Maven
+# Build your Java project and run tests with Apache Maven.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+trigger:
+- master
+pool:
+  vmImage: 'ubuntu-latest'
+steps:
+- task: BrowserStackConfig@0
+  inputs:
+    BrowserStackServiceEndPoint: 'BSConnection'
+    browserstackLocal: false
+- script: |
+    cd testng-appium-app-browserstack/android/testng-examples/
+    mvn clean
+    mvn test -P first
+  displayName: 'trying mvn'
+- task: BrowserStackResults@0

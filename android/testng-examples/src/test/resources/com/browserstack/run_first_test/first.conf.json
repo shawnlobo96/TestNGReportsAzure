@@ -4,11 +4,11 @@
   "access_key": "BROWSERSTACK_ACCESS_KEY",
 
   "capabilities": {
-    "project": "First TestNg Android Project",
-    "build": "TestNg Android First",
+    "project": "AzureReports",
+    "build": "LocalExecution",
     "name": "first_test",
     "browserstack.debug": true,
-    "app": "bs://<app-id>"
+    "app": "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c"
   },
 
   "environments": [

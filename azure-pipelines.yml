@@ -10,12 +10,8 @@ pool:
 steps:
 - task: BrowserStackConfig@0
   inputs:
-    BrowserStackServiceEndPoint: 'Azure'
+    BrowserStackServiceEndPoint: 'BSConnection'
     browserstackLocal: false
-- task: NodeTool@0
-  inputs:
-    versionSpec: '12.x'
-  displayName: 'Install Node.js'
 - script: |
     echo $BROWSERSTACK_LOCAL_IDENTIFIER
     cd testng-appium-app-browserstack/
